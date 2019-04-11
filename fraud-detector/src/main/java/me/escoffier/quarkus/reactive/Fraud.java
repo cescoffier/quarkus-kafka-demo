@@ -14,7 +14,7 @@ public class Fraud {
     private double amount;
 
     public Fraud() {
-        // USe by mappers
+        // Use by mappers
     }
 
     public Fraud(List<Transaction> transactions) {

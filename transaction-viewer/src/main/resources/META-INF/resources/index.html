@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Transaction Views</title>
+    <title>User Account</title>
 
     <link rel="stylesheet" type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.24.0/css/patternfly.min.css">
@@ -45,12 +45,12 @@
 <script>
 
     $(function () {
-        var socket = new WebSocket("ws://localhost:8082/transactions");
-        socket.onmessage = function(e) {
+        var source = new EventSource("http://localhost:8082/tx");
+        source.onmessage = function(e) {
             console.log(e);
             var tx = JSON.parse(e.data);
             $("tbody").append(line(tx));
-        }
+        };
     });
 
     function line(tx) {

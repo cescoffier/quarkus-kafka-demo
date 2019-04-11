@@ -15,36 +15,7 @@
       <groupId>io.quarkus</groupId>
       <artifactId>quarkus-undertow-websockets</artifactId>
     </dependency>
-    <dependency>
-      <groupId>io.quarkus</groupId>
-      <artifactId>quarkus-vertx</artifactId>
-    </dependency>
 
-    <dependency>
-      <groupId>io.quarkus</groupId>
-      <artifactId>quarkus-smallrye-reactive-messaging-kafka</artifactId>
-      <exclusions>
-        <exclusion>
-          <groupId>io.smallrye.reactive</groupId>
-          <artifactId>smallrye-reactive-messaging-kafka</artifactId>
-        </exclusion>
-        <exclusion>
-          <groupId>io.smallrye.reactive</groupId>
-          <artifactId>smallrye-reactive-streams-operators</artifactId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-    <dependency>
-      <groupId>io.smallrye.reactive</groupId>
-      <artifactId>smallrye-reactive-messaging-kafka</artifactId>
-      <version>0.0.6</version>
-      <exclusions>
-        <exclusion>
-          <groupId>io.vertx</groupId>
-          <artifactId>vertx-core</artifactId>
-        </exclusion>
-      </exclusions>
-    </dependency>
   </dependencies>
   <build>
     <plugins>

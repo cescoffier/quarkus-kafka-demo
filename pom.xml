@@ -10,7 +10,7 @@
     <packaging>pom</packaging>
 
     <properties>
-        <quarkus.version>999-SNAPSHOT</quarkus.version>
+        <quarkus.version>0.13.1</quarkus.version>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -79,6 +79,7 @@
     </dependencies>
 
     <modules>
+        <module>async-demo</module>
         <module>payment-service</module>
         <module>transaction-viewer</module>
         <module>fraud-detector</module>

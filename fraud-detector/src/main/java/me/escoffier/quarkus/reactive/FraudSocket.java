@@ -21,9 +21,8 @@ public class FraudSocket {
     @OnOpen
     public void opening(Session session) {
         stream
-                .forEach(s -> {
-                    session.getAsyncRemote().sendText(JsonbBuilder.create().toJson(s));
-                })
+                .forEach(s ->
+                        session.getAsyncRemote().sendText(JsonbBuilder.create().toJson(s)))
                 .run();
     }
 
